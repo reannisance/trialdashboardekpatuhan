@@ -87,7 +87,7 @@ if uploaded_file:
         df_output.to_excel(output, index=False)
         st.download_button("⬇️ Download Hasil Excel", data=output.getvalue(), file_name="hasil_dashboard.xlsx")
 
-        st.subheader("🧁 Pie Chart Kepatuhan WP (Warna Lucu)")
+        st.subheader("🧁 Pie Chart Kepatuhan WP")
         pie_data = df_output["Klasifikasi Kepatuhan"].value_counts().reset_index()
         pie_data.columns = ["Klasifikasi", "Jumlah"]
         fig_pie = px.pie(
