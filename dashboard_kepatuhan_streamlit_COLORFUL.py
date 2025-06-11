@@ -81,7 +81,7 @@ if uploaded_file:
     pie_data = df_output["Klasifikasi Kepatuhan"].value_counts().reset_index()
     pie_data.columns = ["Klasifikasi", "Jumlah"]
     fig_pie = px.pie(pie_data, names="Klasifikasi", values="Jumlah",
-                     color_discrete_sequence=px.colors.sequential.Pastel,
+                     px.colors.qualitative.Pastel,
                      title="Distribusi Kepatuhan WP")
     st.plotly_chart(fig_pie, use_container_width=True)
 
